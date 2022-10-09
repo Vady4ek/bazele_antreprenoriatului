@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.min.css">
+    <script type="text/javascript" src="main.min.js" defer></script>
+    <title>Livrarea de produse</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__left">
+                    <a class="header__logo" href="index.html">
+                        <img src="images/main.svg" alt="logo">
+                    </a>
+                    <form class="header__search search" action="#" method="#">
+                        <input class="search__input" type="search" placeholder="Căutare">
+                        <button class="search__button" type="submit">
+                            <img src="images/search.svg" alt="magnifier">
+                        </button>
+                    </form>
+                </div>
+                <div class="header__right">
+                    <nav class="header__navigation navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link header-link" href="#">Restaurante</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link header-link" href="#">Detalii</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__orders">
+                        <div class="header__orders-link">
+                            <a class="header__link  header-link" href="#">Comenzile</a>
+                        </div>
+                        <a class="header__cart header__cart_full" href="#">
+                            <img src="images/shopping-bag.svg" alt="shopping bag">
+                            <span id="cart-count">4</span>
+                        </a>
+                    </div>
+                    <a class="header__user" href="account.html">
+                        <img class="header__user" src="images/user.jpg" alt="user">
+                    </a>
+                    <div class="header__burger burger">
+                        <div class="burger__icon">
+                            <div class="burger__button" id="burger-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-body" id="burger-body">
+            <form class="burger-body__search search" action="#" method="#">
+                <input class="search__input" type="search" placeholder="Search">
+                <button class="search__button" type="submit">
+                    <img src="images/search.svg" alt="magnifier">
+                </button>
+            </form>
+            <nav class="burger-body__navigation navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link header-link" href="#">Restaurants</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link header-link" href="#">Deals</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__promo">
+            <div class="container">
+                <div class="promo__items">
+                    <a class="promo__item promo__item_blue" href="#">
+                        <div class="promo__wrapper">
+                            <div class="promo__image">
+                                <img src="images/cake.png" alt="cake">
+                            </div>
+                            <div class="promo__content">
+                                <div class="promo__category">Toate Desertele</div>
+                                <div class="promo__sale">20% REDUCERE</div>
+                                <div class="promo__label">Deserty</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="promo__item promo__item_orange" href="#">
+                        <div class="promo__wrapper">
+                            <div class="promo__image">
+                                <img src="images/burger.png" alt="burger">
+                            </div>
+                            <div class="promo__content">
+                                <div class="promo__category">Burghere Mari</div>
+                                <div class="promo__sale">50% REDUCERE</div>
+                                <div class="promo__label">Fooddies</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section class="main__restaurants restaurants">
+            <div class="container">
+                <div class="restaurants__inner">
+                    <div class="restaurants__filter filter">
+                        <div class="filter__item">
+                            <div class="filter__wrapper" data-filter="pizza">
+                                <div class="filter__image">
+                                    <img src="images/pizza.png" alt="pizza">
+                                </div>
+                                <div class="filter__label">Pizza</div>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="filter__wrapper" data-filter="burgers">
+                                <div class="filter__image">
+                                    <img src="images/burger-small.png" alt="burger">
+                                </div>
+                                <div class="filter__label">Burger</div>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="filter__wrapper" data-filter="meat">
+                                <div class="filter__image">
+                                    <img src="images/meat.png" alt="meat">
+                                </div>
+                                <div class="filter__label">BBQ</div>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="filter__wrapper" data-filter="sushi">
+                                <div class="filter__image">
+                                    <img src="images/sushi.png" alt="sushi">
+                                </div>
+                                <div class="filter__label">Sushi</div>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="filter__wrapper" data-filter="vegan">
+                                <div class="filter__image">
+                                    <img src="images/broccoli.png" alt="broccoli">
+                                </div>
+                                <div class="filter__label">Vegan</div>
+                            </div>
+                        </div>
+                        <div class="filter__item">
+                            <div class="filter__wrapper" data-filter="desserts">
+                                <div class="filter__image">
+                                    <img src="images/cake-small.png" alt="cake">
+                                </div>
+                                <div class="filter__label">Desert</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="restaurants__header">Restaurante din apropiere</h2>
+                    <div class="restaurants__items" id="grid">
+                        <div class="restaurants__item sushi">
+                            <div class="restaurants__wrapper">
+                                <a href="#" class="restaurants__image restaurants__image_sale">
+                                    <img src="images/restaurant-1.jpg" alt="restaurant">
+                                </a>
+                                <div class="restaurants__content">
+                                    <div class="restaurants__top">
+                                        <h3 class="restaurants__name"><a href="#">Royal Sushi House</a></h3>
+                                        <a href="#" class="restaurants__cart">
+                                            <div class="restaurants__cart-icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 1.66667L2.5 5V16.6667C2.5 17.1087 2.67559 17.5326 2.98816 17.8452C3.30072 18.1577 3.72464 18.3333 4.16667 18.3333H15.8333C16.2754 18.3333 16.6993 18.1577 17.0118 17.8452C17.3244 17.5326 17.5 17.1087 17.5 16.6667V5L15 1.66667H5Z"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.5 5H17.5" stroke="#C7C8D2" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3333 8.33333C13.3333 9.21739 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.8841 11.6667 10 11.6667C9.11595 11.6667 8.2681 11.3155 7.64298 10.6904C7.01786 10.0652 6.66667 9.21739 6.66667 8.33333"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                    <div class="restaurants__info">
+                                        <div class="restaurants__time">
+                                            <img src="images/clock.svg" alt="clock">
+                                            30-40 min
+                                        </div>
+                                        <div class="restaurants__price">lei 32 min sum</div>
+                                    </div>
+                                    <div class="restaurants__tags">
+                                        <div class="restaurants__tag">
+                                            <img class="restaurants__icon" src="images/sushi.png" alt="sushi">
+                                            Sushi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__item pizza burgers">
+                            <div class="restaurants__wrapper">
+                                <a href="#" class="restaurants__image restaurants__image_sale">
+                                    <img src="images/restaurant-2.jpg" alt="restaurant">
+                                </a>
+                                <div class="restaurants__content">
+                                    <div class="restaurants__top">
+                                        <h3 class="restaurants__name"><a href="#">Burgers & Pizza</a></h3>
+                                        <a href="#" class="restaurants__cart restaurants__cart_full">
+                                            <div class="restaurants__cart-icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 1.66667L2.5 5V16.6667C2.5 17.1087 2.67559 17.5326 2.98816 17.8452C3.30072 18.1577 3.72464 18.3333 4.16667 18.3333H15.8333C16.2754 18.3333 16.6993 18.1577 17.0118 17.8452C17.3244 17.5326 17.5 17.1087 17.5 16.6667V5L15 1.66667H5Z"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.5 5H17.5" stroke="#C7C8D2" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3333 8.33333C13.3333 9.21739 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.8841 11.6667 10 11.6667C9.11595 11.6667 8.2681 11.3155 7.64298 10.6904C7.01786 10.0652 6.66667 9.21739 6.66667 8.33333"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span>2</span>
+                                        </a>
+                                    </div>
+                                    <div class="restaurants__info">
+                                        <div class="restaurants__time">
+                                            <img src="images/clock.svg" alt="clock">
+                                            40-60 min
+                                        </div>
+                                        <div class="restaurants__price">lei 24 min sum</div>
+                                    </div>
+                                    <div class="restaurants__tags">
+                                        <div class="restaurants__tag">
+                                            <img class="restaurants__icon" src="images/burger-small.png" alt="burger">
+                                            Burger
+                                        </div>
+                                        <div class="restaurants__tag">
+                                            <img class="restaurants__icon" src="images/pizza.png" alt="pizza">
+                                            Pizza
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__item sushi">
+                            <div class="restaurants__wrapper">
+                                <a href="#" class="restaurants__image">
+                                    <img src="images/restaurant-3.jpg" alt="restaurant">
+                                </a>
+                                <div class="restaurants__content">
+                                    <div class="restaurants__top">
+                                        <h3 class="restaurants__name"><a href="#">Ninja sushi</a></h3>
+                                        <a href="#" class="restaurants__cart">
+                                            <div class="restaurants__cart-icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 1.66667L2.5 5V16.6667C2.5 17.1087 2.67559 17.5326 2.98816 17.8452C3.30072 18.1577 3.72464 18.3333 4.16667 18.3333H15.8333C16.2754 18.3333 16.6993 18.1577 17.0118 17.8452C17.3244 17.5326 17.5 17.1087 17.5 16.6667V5L15 1.66667H5Z"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.5 5H17.5" stroke="#C7C8D2" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3333 8.33333C13.3333 9.21739 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.8841 11.6667 10 11.6667C9.11595 11.6667 8.2681 11.3155 7.64298 10.6904C7.01786 10.0652 6.66667 9.21739 6.66667 8.33333"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                    <div class="restaurants__info">
+                                        <div class="restaurants__time">
+                                            <img src="images/clock.svg" alt="clock">
+                                            20-40 min
+                                        </div>
+                                        <div class="restaurants__price">lei 40 min sum</div>
+                                    </div>
+                                    <div class="restaurants__tags">
+                                        <div class="restaurants__tag">
+                                            <img class="restaurants__icon" src="images/sushi.png" alt="sushi">
+                                            Sushi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__item sushi">
+                            <div class="restaurants__wrapper">
+                                <a href="#" class="restaurants__image">
+                                    <img src="images/restaurant-4.jpg" alt="restaurant">
+                                </a>
+                                <div class="restaurants__content">
+                                    <div class="restaurants__top">
+                                        <h3 class="restaurants__name"><a href="#">Sushi master</a></h3>
+                                        <a href="#" class="restaurants__cart">
+                                            <div class="restaurants__cart-icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 1.66667L2.5 5V16.6667C2.5 17.1087 2.67559 17.5326 2.98816 17.8452C3.30072 18.1577 3.72464 18.3333 4.16667 18.3333H15.8333C16.2754 18.3333 16.6993 18.1577 17.0118 17.8452C17.3244 17.5326 17.5 17.1087 17.5 16.6667V5L15 1.66667H5Z"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.5 5H17.5" stroke="#C7C8D2" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3333 8.33333C13.3333 9.21739 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.8841 11.6667 10 11.6667C9.11595 11.6667 8.2681 11.3155 7.64298 10.6904C7.01786 10.0652 6.66667 9.21739 6.66667 8.33333"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                    <div class="restaurants__info">
+                                        <div class="restaurants__time">
+                                            <img src="images/clock.svg" alt="clock">
+                                            60-70 min
+                                        </div>
+                                        <div class="restaurants__price">lei 49 min sum</div>
+                                    </div>
+                                    <div class="restaurants__tags">
+                                        <div class="restaurants__tag">
+                                            <img class="restaurants__icon" src="images/sushi.png" alt="sushi">
+                                            Sushi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__item sushi">
+                            <div class="restaurants__wrapper">
+                                <a href="#" class="restaurants__image">
+                                    <img src="images/restaurant-5.jpg" alt="restaurant">
+                                </a>
+                                <div class="restaurants__content">
+                                    <div class="restaurants__top">
+                                        <h3 class="restaurants__name"><a href="#">Japanese sushi</a></h3>
+                                        <a href="#" class="restaurants__cart">
+                                            <div class="restaurants__cart-icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 1.66667L2.5 5V16.6667C2.5 17.1087 2.67559 17.5326 2.98816 17.8452C3.30072 18.1577 3.72464 18.3333 4.16667 18.3333H15.8333C16.2754 18.3333 16.6993 18.1577 17.0118 17.8452C17.3244 17.5326 17.5 17.1087 17.5 16.6667V5L15 1.66667H5Z"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.5 5H17.5" stroke="#C7C8D2" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3333 8.33333C13.3333 9.21739 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.8841 11.6667 10 11.6667C9.11595 11.6667 8.2681 11.3155 7.64298 10.6904C7.01786 10.0652 6.66667 9.21739 6.66667 8.33333"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                    <div class="restaurants__info">
+                                        <div class="restaurants__time">
+                                            <img src="images/clock.svg" alt="clock">
+                                            30-50 min
+                                        </div>
+                                        <div class="restaurants__price">lei 104 min sum</div>
+                                    </div>
+                                    <div class="restaurants__tags">
+                                        <div class="restaurants__tag">
+                                            <img class="restaurants__icon" src="images/sushi.png" alt="sushi">
+                                            Sushi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurants__item sushi">
+                            <div class="restaurants__wrapper">
+                                <a href="#" class="restaurants__image">
+                                    <img src="images/restaurant-6.jpg" alt="restaurant">
+                                </a>
+                                <div class="restaurants__content">
+                                    <div class="restaurants__top">
+                                        <h3 class="restaurants__name"><a href="#">Kobe</a></h3>
+                                        <a href="#" class="restaurants__cart">
+                                            <div class="restaurants__cart-icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 1.66667L2.5 5V16.6667C2.5 17.1087 2.67559 17.5326 2.98816 17.8452C3.30072 18.1577 3.72464 18.3333 4.16667 18.3333H15.8333C16.2754 18.3333 16.6993 18.1577 17.0118 17.8452C17.3244 17.5326 17.5 17.1087 17.5 16.6667V5L15 1.66667H5Z"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.5 5H17.5" stroke="#C7C8D2" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13.3333 8.33333C13.3333 9.21739 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.8841 11.6667 10 11.6667C9.11595 11.6667 8.2681 11.3155 7.64298 10.6904C7.01786 10.0652 6.66667 9.21739 6.66667 8.33333"
+                                                        stroke="#C7C8D2" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                    <div class="restaurants__info">
+                                        <div class="restaurants__time">
+                                            <img src="images/clock.svg" alt="clock">
+                                            20-30 min
+                                        </div>
+                                        <div class="restaurants__price">lei 57 min sum</div>
+                                    </div>
+                                    <div class="restaurants__tags">
+                                        <div class="restaurants__tag">
+                                            <img class="restaurants__icon" src="images/sushi.png" alt="sushi">
+                                            Sushi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__copy">
+                © 2022 <span>Poșcoi Vadim</span> | Toate drepturile rezervate
+            </div>
+            <div class="footer__left">
+                Proiect creat pentru disciplina <span>Bazele Antreprenoriatului</span> din cadrul CTFB
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
